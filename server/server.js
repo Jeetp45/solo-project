@@ -1,18 +1,22 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mongoose = require('mongoose');
+const pokemonRouter = require('../routes/pokemonRouter');
+const connectDB = require('../db');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = 3000;
+connectDB();
 
 app.get('/', (req, res) => {
   return res
     .status(200)
-    .sendFile(path.resolve(__dirname, '/client/index.html'));
+    .sendFile(path.resolve(__dirname, '../client/index.html'));
 });
+
+app.use('/api', pokemonRouter);
 
 app.use((err, req, res, next) => {
   const defaultErr = {

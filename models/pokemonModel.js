@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 
 const pokemonSchema = new Schema({
   name: { type: String, required: true, unique: true },
-  baseExperience: { type: Number },
+  base_experience: Number,
   types: [String],
   height: Number,
-  sprites: String,
+  sprite: String,
 });
 
 const Pokemon = mongoose.model('pokemon', pokemonSchema);
