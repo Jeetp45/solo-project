@@ -10,11 +10,13 @@ app.use(express.urlencoded({ extended: true }));
 const PORT = 3000;
 connectDB();
 
-app.get('/', (req, res) => {
-  return res
-    .status(200)
-    .sendFile(path.resolve(__dirname, '../client/index.html'));
-});
+app.use(express.static(path.join(__dirname, 'client')));
+
+// app.get('/', (req, res) => {
+//   return res
+//     .status(200)
+//     .sendFile(path.resolve(__dirname, '../client/index.html'));
+// });
 
 app.use('/api', pokemonRouter);
 
