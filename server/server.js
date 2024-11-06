@@ -12,11 +12,11 @@ connectDB();
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-// app.get('/', (req, res) => {
-//   return res
-//     .status(200)
-//     .sendFile(path.resolve(__dirname, '../client/index.html'));
-// });
+app.get('/', (req, res) => {
+  return res
+    .status(200)
+    .sendFile(path.resolve(__dirname, '../client/index.html'));
+});
 
 app.use('/api', pokemonRouter);
 
