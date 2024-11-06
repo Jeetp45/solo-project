@@ -6,7 +6,7 @@ const getPokemonData = async (req, res, next) => {
   try {
     let pokemon = await Pokemon.findOne({ name });
     // console.log('Pokemon: ', pokemon);
-    console.log('Query:', pokemon.getQuery());
+    // console.log('Query:', pokemon.getQuery());
 
     if (!pokemon) {
       // Fetching data from external API
