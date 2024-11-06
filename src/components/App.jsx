@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import PokemonInfo from '/src/components/pokemonInfo';
 
 const App = (props) => {
   return (
     <div>
-      <h1>Hello World 2!</h1>
+      <PokemonInfo />
     </div>
   );
 };
 
 export default App;
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />);

@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
 const pokemonRouter = require('../routes/pokemonRouter');
 const connectDB = require('../db');
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,11 +14,11 @@ connectDB();
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.get('/', (req, res) => {
-  return res
-    .status(200)
-    .sendFile(path.resolve(__dirname, '../client/index.html'));
-});
+// app.get('/', (req, res) => {
+//   return res
+//     .status(200)
+//     .sendFile(path.resolve(__dirname, '../client/index.html'));
+// });
 
 app.use('/api', pokemonRouter);
 
