@@ -7,7 +7,7 @@
 
 .pokemon-card {
   width: 200px;
-  background-color: #f0f0f0;
+  background-color: #f13d3d;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -26,13 +26,13 @@ input {
   max-width: 400px;
   margin-bottom: 10px;
   border-radius: 8px;
-  border: 2px solid rgb(12, 98, 38);
+  border: 2px solid rgb(181, 14, 14);
 }
 
 button {
   font-size: 18px;
   padding: 14px 20px;
-  background-color: #b1493e;
+  background-color: #d6301e;
   color: white;
   border: none;
   border-radius: 8px;

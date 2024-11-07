@@ -30,7 +30,7 @@ const getPokemonData = async (req, res, next) => {
         base_experience: base_experience || 0,
         sprite: sprites ? sprites.front_default : null,
       });
-      console.log(`Found Pokémon:`, pokemon);
+      // console.log(`Found Pokémon:`, pokemon);
       await pokemon.save();
       res.locals.pokemon = pokemon;
       return next();
