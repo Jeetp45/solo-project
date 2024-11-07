@@ -8,6 +8,7 @@ const pokemonSchema = new Schema({
   types: [String],
   height: Number,
   sprite: String,
+  past_types: [String],
 });
 
 const Pokemon = mongoose.model('pokemon', pokemonSchema);

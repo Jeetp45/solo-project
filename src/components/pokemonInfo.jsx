@@ -18,10 +18,10 @@ const PokemonInfo = () => {
       );
       //   console.log('Response: ', response.data);
       //   console.log('Sprite: ', response.data.sprite);
-      if (!response.data || !response.data.sprite) {
-        setError('No valid sprite found for this Pokémon');
-        return;
-      }
+      // if (!response.data || !response.data.sprite) {
+      //   setError('No valid sprite found for this Pokémon');
+      //   return;
+      // }
       setPokemons((prevPokemons) => [
         ...prevPokemons,
         {
@@ -30,6 +30,7 @@ const PokemonInfo = () => {
           height: response.data.height || 0,
           base_experience: response.data.base_experience || 0,
           sprite: response.data.sprite,
+          past_types: response.data.past_types,
         },
       ]);
     } catch (err) {

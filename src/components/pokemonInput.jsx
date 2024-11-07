@@ -2,7 +2,7 @@ import React from 'react';
 
 const PokemonInput = ({ pokemonName, setPokemonName, getPokemonData }) => {
   return (
-    <div>
+    <div className='pokemon-input'>
       <input
         type='text'
         placeholder='Enter Pokemon Name'

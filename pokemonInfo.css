@@ -1,22 +1,30 @@
 .pokemon-container {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-left: 70px;
-  /* justify-content: center; */
+  margin-left: 100px;
+  gap: 15px;
 }
 
 .pokemon-card {
-  width: 200px;
+  width: 250px;
   background-color: #f13d3d;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.pokemon-input {
+  text-align: center;
+}
 
 .pokemon-card img {
   width: 100%;
   /* border-radius: 8px;  */
+}
+.error {
+  display: flex;
+  justify-content: center;
 }
 
 input {

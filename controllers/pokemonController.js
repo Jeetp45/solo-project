@@ -21,7 +21,8 @@ const getPokemonData = async (req, res, next) => {
           message: { err: `Pokémon ${name} not found in API` },
         });
       }
-      const { types, height, base_experience, sprites } = response.data;
+      const { types, height, base_experience, sprites, past_types } =
+        response.data;
 
       pokemon = new Pokemon({
         name: response.data.name,
@@ -29,6 +30,9 @@ const getPokemonData = async (req, res, next) => {
         height: height || 0,
         base_experience: base_experience || 0,
         sprite: sprites ? sprites.front_default : null,
+        past_types: past_types
+          ? past_types.map((gen) => gen.generation.name)
+          : [],
       });
       // console.log(`Found Pokémon:`, pokemon);
       await pokemon.save();

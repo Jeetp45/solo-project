@@ -20,6 +20,14 @@ const PokemonDetails = ({ pokemon }) => {
       <p>
         <strong>Base Experience:</strong> {pokemon.base_experience}
       </p>
+      <p>
+        <strong>Generation:</strong>
+        {pokemon.past_types &&
+        Array.isArray(pokemon.past_types) &&
+        pokemon.past_types.length > 0
+          ? pokemon.past_types.join(', ')
+          : 'None'}
+      </p>
     </div>
   );
 };
