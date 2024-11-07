@@ -16,12 +16,7 @@ const PokemonInfo = () => {
       const response = await axios.get(
         `http://localhost:8080/api/pokemon/${pokemonName.toLowerCase()}`
       );
-      //   console.log('Response: ', response.data);
-      //   console.log('Sprite: ', response.data.sprite);
-      // if (!response.data || !response.data.sprite) {
-      //   setError('No valid sprite found for this Pokémon');
-      //   return;
-      // }
+      console.log(response.data);
       setPokemons((prevPokemons) => [
         ...prevPokemons,
         {
